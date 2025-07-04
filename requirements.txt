@@ -1,2 +1,3 @@
 pgmpy==0.1.23
 Pillow==10.3.0
+pip install scipy==1.11.4
