@@ -1,0 +1,76 @@
+{
+  "start": {
+    "text": "You wake up in a mysterious forest. Do you go left or right?",
+    "image": "forest.png",
+    "choices": {
+      "left": {
+        "next": "cave",
+        "effects": {
+          "reputation": 1
+        }
+      },
+      "right": {
+        "next": "river",
+        "effects": {
+          "energy": -1
+        }
+      }
+    }
+  },
+  "cave": {
+    "text": "You enter a dark cave. Do you fight the bear or sneak past?",
+    "image": "cave.png",
+    "choices": {
+      "fight": {
+        "next": "treasure",
+        "effects": {
+          "energy": -2,
+          "reputation": 2,
+          "inventory": [
+            "gem"
+          ]
+        }
+      },
+      "sneak": {
+        "next": "lost",
+        "effects": {
+          "reputation": -1
+        }
+      }
+    }
+  },
+  "river": {
+    "text": "A river blocks your path. Build a raft or wait?",
+    "image": "river.png",
+    "choices": {
+      "raft": {
+        "next": "safe_passage",
+        "effects": {
+          "energy": -1,
+          "reputation": 1
+        }
+      },
+      "wait": {
+        "next": "lost",
+        "effects": {
+          "energy": -1
+        }
+      }
+    }
+  },
+  "treasure": {
+    "text": "You found treasure! You win!",
+    "image": "treasure.png",
+    "choices": {}
+  },
+  "safe_passage": {
+    "text": "You crossed safely. Well done!",
+    "image": "safe.png",
+    "choices": {}
+  },
+  "lost": {
+    "text": "You got lost. Game over.",
+    "image": "lost.png",
+    "choices": {}
+  }
+}
